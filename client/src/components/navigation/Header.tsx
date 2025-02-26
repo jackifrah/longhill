@@ -25,7 +25,7 @@ export default function Header() {
           >
             <img 
               src={orlyLogoSvg}
-              className="h-8 hover:opacity-80 transition-opacity [filter:hue-rotate(-10deg)_saturate(150%)_brightness(0.9)]"
+              className="h-8 hover:opacity-80 transition-opacity"
               alt="Orly AI Agent"
             />
           </button>
