@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 export default function Home() {
   return (
     <div className="container py-12">
-      <div className="mx-auto max-w-3xl space-y-8">
+      <div className="mx-auto max-w-6xl grid md:grid-cols-2 gap-8 items-center">
         <Card className="w-full overflow-hidden">
           <img
             alt="Jack Ifrah - Professional Photo"
