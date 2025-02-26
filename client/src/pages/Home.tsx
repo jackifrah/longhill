@@ -21,8 +21,9 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="flex justify-end">
-          <div className="w-full md:w-2/3">
+        {/* Only modifying the Orly section layout below */}
+        <div className="flex flex-col items-center w-full">
+          <div className="w-full max-w-3xl">
             <OrlySection />
           </div>
         </div>
