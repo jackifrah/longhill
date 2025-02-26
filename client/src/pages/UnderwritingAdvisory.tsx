@@ -27,7 +27,7 @@ export default function UnderwritingAdvisory() {
           {/* Consultation Section */}
           <div className="w-full bg-white/50 dark:bg-gray-900/50 rounded-xl p-6">
             <iframe
-              src="https://app.cal.com/jackifrah/30min"
+              src="https://motion.com/user/jackifrah/schedule"
               className="w-full h-[600px] border-0"
               frameBorder="0"
             ></iframe>
