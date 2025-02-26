@@ -7,13 +7,14 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-16 items-center">
         <Link href="/" className="flex items-center space-x-1">  
           <Logo className="h-8 w-8" />
           <span className="font-medium">Longhill Consulting</span>
         </Link>
+        <div className="flex-1" />
         <NavigationMenu>
-          <NavigationMenuList className="gap-x-2">
+          <NavigationMenuList className="gap-x-4">
             <NavigationMenuItem>
               <button
                 onClick={() => navigate("/ai-agent")}
