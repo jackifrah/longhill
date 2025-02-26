@@ -3,7 +3,7 @@ import React from "react";
 export default function Home() {
   return (
     <div className="container py-12">
-      <div className="mx-auto max-w-4xl grid md:grid-cols-2 gap-8 items-start">
+      <div className="mx-auto max-w-4xl grid md:grid-cols-2 gap-4 items-start">
         <div className="w-full h-[300px] overflow-hidden">
           <img
             alt="Jack Ifrah - Professional Photo"
