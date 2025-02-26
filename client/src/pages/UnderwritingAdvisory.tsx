@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { FileText } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export default function UnderwritingAdvisory() {
   return (
@@ -16,10 +23,29 @@ export default function UnderwritingAdvisory() {
                 <div className="flex items-center gap-3">
                   <FileText className="h-5 w-5 text-green-600" />
                   <div>
-                    <p className="text-sm text-gray-700 dark:text-gray-300">Comprehensive model for multifamily property analysis</p>
+                    <p className="text-sm text-gray-700 dark:text-gray-300">Multifamily Acquisition</p>
                   </div>
                 </div>
-                <Button variant="outline">Download</Button>
+                <div className="flex gap-2">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline">Explore</Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl">
+                      <DialogHeader>
+                        <DialogTitle>Model Preview</DialogTitle>
+                      </DialogHeader>
+                      <div className="grid gap-4 py-4">
+                        <img
+                          src="/attached_assets/MLCFs screenshot.png"
+                          alt="Master Leasing Cash Flows"
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                  <Button>Buy Now ($149)</Button>
+                </div>
               </div>
             </div>
           </div>
