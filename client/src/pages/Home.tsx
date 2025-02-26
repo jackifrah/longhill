@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="container py-12 flex justify-center">
       <div className="mx-auto max-w-4xl">
-        <div className="grid md:grid-cols-2 items-start mb-16 rounded-xl p-4">
+        <div className="grid md:grid-cols-2 items-start mb-8 rounded-xl p-4">
           <div className="w-full h-[300px] overflow-hidden rounded-lg">
             <img
               alt="Jack Ifrah - Professional Photo"
