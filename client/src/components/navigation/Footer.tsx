@@ -17,9 +17,14 @@ export default function Footer() {
             Institutional-grade models for sale
           </Link>
           <Separator orientation="vertical" className="hidden h-6 md:block" />
-          <Link href="#" className="text-sm font-medium hover:underline">
+          <a 
+            href="https://app.usemotion.com/meet/jack-ifrah/meeting"
+            target="_blank"
+            rel="noopener noreferrer" 
+            className="text-sm font-medium hover:underline"
+          >
             Find a time to discuss your project
-          </Link>
+          </a>
         </nav>
       </div>
     </footer>
