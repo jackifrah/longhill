@@ -6,6 +6,7 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import NotFound from "@/pages/not-found";
 import Layout from "@/components/layout/Layout";
+import UnderwritingAdvisory from "@/pages/UnderwritingAdvisory";
 
 function Router() {
   return (
@@ -13,6 +14,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/underwriting" component={UnderwritingAdvisory} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
