@@ -20,9 +20,13 @@ export default function Header() {
           </button>
           <button
             onClick={() => navigate("/ai-agent")}
-            className="text-sm font-medium text-purple-800 hover:text-purple-900"
+            className="flex items-center"
           >
-            Orly AI Agent
+            <img 
+              src="/orly-logo-wordmark@2x-2.svg" 
+              alt="Orly AI Agent"
+              className="h-6 hover:opacity-80 transition-opacity"
+            />
           </button>
         </nav>
       </div>
