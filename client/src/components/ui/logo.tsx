@@ -3,7 +3,7 @@ import React from "react";
 export function Logo(props: React.HTMLAttributes<HTMLImageElement>) {
   return (
     <img
-      src="/attached_assets/orly-logo-icon-1.png"
+      src="/orly-logo-icon@2x-1.svg"
       alt="Longhill Consulting Logo"
       className="h-6 w-6 grayscale"
       {...props}
