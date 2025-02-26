@@ -3,7 +3,7 @@ import { OrlySection } from "@/components/ui/orly-section";
 
 export default function Home() {
   return (
-    <div className="container py-12">
+    <div className="container py-12 flex justify-center">
       <div className="mx-auto max-w-4xl">
         <div className="grid md:grid-cols-2 items-start mb-16">
           <div className="w-full h-[300px] overflow-hidden">
@@ -21,7 +21,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* Only modifying the Orly section layout below */}
         <div className="flex flex-col items-center w-full">
           <div className="w-full max-w-3xl">
             <OrlySection />
