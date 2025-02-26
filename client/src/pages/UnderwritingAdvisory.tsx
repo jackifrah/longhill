@@ -27,9 +27,10 @@ export default function UnderwritingAdvisory() {
           {/* Consultation Section */}
           <div className="w-full bg-white/50 dark:bg-gray-900/50 rounded-xl p-6">
             <iframe
-              src="https://motion.com/user/jackifrah/schedule"
+              src="https://motion.com/forms/f/62c375"
               className="w-full h-[600px] border-0"
-              frameBorder="0"
+              loading="lazy"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
           </div>
         </div>
