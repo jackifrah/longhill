@@ -1,5 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { Logo } from "@/components/ui/logo";
+import OrlyLogo from "/orly-logo-wordmark@2x-2.svg?react";
 
 export default function Header() {
   const [location, navigate] = useLocation();
@@ -22,10 +23,9 @@ export default function Header() {
             onClick={() => navigate("/ai-agent")}
             className="flex items-center"
           >
-            <img 
-              src="/orly-logo-wordmark@2x-2.svg" 
-              alt="Orly AI Agent"
+            <OrlyLogo 
               className="h-6 hover:opacity-80 transition-opacity"
+              aria-label="Orly AI Agent"
             />
           </button>
         </nav>
