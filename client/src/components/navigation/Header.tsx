@@ -19,8 +19,10 @@ export default function Header() {
           >
             Underwriting Advisory
           </button>
-          <button
-            onClick={() => navigate("/ai-agent")}
+          <a
+            href="https://orlyrealestate.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center"
           >
             <img 
@@ -28,7 +30,7 @@ export default function Header() {
               className="h-8 hover:opacity-80 transition-opacity"
               alt="Orly AI Agent"
             />
-          </button>
+          </a>
         </nav>
       </div>
     </header>
