@@ -11,18 +11,18 @@ export default function Header() {
           <Logo className="h-8 w-8" />
           <span className="font-medium">Longhill Consulting</span>
         </Link>
-        <nav className="ml-auto flex items-center space-x-4">
-          <button
-            onClick={() => navigate("/ai-agent")}
-            className="text-sm font-medium text-purple-800 hover:text-purple-900"
-          >
-            Orly AI Agent
-          </button>
+        <nav className="ml-auto flex items-center space-x-6">
           <button
             onClick={() => navigate("/underwriting")}
             className="text-sm font-medium text-foreground hover:text-foreground/80"
           >
             Underwriting Advisory
+          </button>
+          <button
+            onClick={() => navigate("/ai-agent")}
+            className="text-sm font-medium text-purple-800 hover:text-purple-900"
+          >
+            Orly AI Agent
           </button>
         </nav>
       </div>
