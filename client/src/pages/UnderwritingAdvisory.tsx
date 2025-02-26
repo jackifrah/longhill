@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { FileText, ArrowRight } from "lucide-react";
+import modelScreenshot from "../../../MLCFs screenshot.png";
 
 export default function UnderwritingAdvisory() {
   return (
@@ -46,7 +47,7 @@ export default function UnderwritingAdvisory() {
                     </div>
                     <div className="relative">
                       <img
-                        src="/MLCFs screenshot.png"
+                        src={modelScreenshot}
                         alt="Master Leasing Cash Flows"
                         className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform cursor-pointer object-cover"
                       />
