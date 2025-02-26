@@ -1,11 +1,11 @@
-import { SVGProps } from "react";
+import React from "react";
 
-export function Logo(props: SVGProps<SVGSVGElement>) {
+export function Logo(props: React.HTMLAttributes<HTMLImageElement>) {
   return (
     <img
-      src="/orly-logo-icon@2x-1.svg"
+      src="/attached_assets/image_1740584907644.png"
       alt="Longhill Consulting Logo"
-      className="h-6 w-6"
+      className="h-8 w-auto"
       {...props}
     />
   );
