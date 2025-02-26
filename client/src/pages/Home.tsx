@@ -20,10 +20,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
-        <div className="max-w-[280px] md:ml-[340px]">
-          <OrlySection />
-        </div>
+      <div className="mx-auto max-w-4xl ml-8">
+        <OrlySection />
       </div>
     </div>
   );
