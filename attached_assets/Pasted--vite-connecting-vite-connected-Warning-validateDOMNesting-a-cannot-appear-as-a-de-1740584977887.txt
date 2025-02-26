@@ -1,0 +1,73 @@
+[vite] connecting...
+[vite] connected.
+Warning: validateDOMNesting(...): <a> cannot appear as a descendant of &lt;a&gt;.
+    at a
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-EVSHXWBZ.js?v=a643be9e:41:13
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:52:11
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:33:11
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-EVSHXWBZ.js?v=a643be9e:41:13
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:52:11
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:33:11
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-FQMLEXGY.js?v=a643be9e:374:15
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=a643be9e:748:13
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=a643be9e:426:13
+    at a
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=a643be9e:337:18
+    at li
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-EVSHXWBZ.js?v=a643be9e:41:13
+    at Provider (https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-FQMLEXGY.js?v=a643be9e:30:15)
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=a643be9e:299:13
+    at ul
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-EVSHXWBZ.js?v=a643be9e:41:13
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:52:11
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:33:11
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-EVSHXWBZ.js?v=a643be9e:41:13
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:52:11
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:33:11
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-FQMLEXGY.js?v=a643be9e:363:15
+    at Provider (https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-FQMLEXGY.js?v=a643be9e:293:15)
+    at CollectionProvider (https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-FQMLEXGY.js?v=a643be9e:354:13)
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=a643be9e:739:13
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:52:11
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:33:11
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-FQMLEXGY.js?v=a643be9e:363:15
+    at div
+    at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-EVSHXWBZ.js?v=a643be9e:41:13
+    at…
+at a
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-EVSHXWBZ.js?v=a643be9e:41:13
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:52:11
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:33:11
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-EVSHXWBZ.js?v=a643be9e:41:13
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:52:11
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:33:11
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-FQMLEXGY.js?v=a643be9e:374:15
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=a643be9e:748:13
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=a643be9e:426:13
+at a
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=a643be9e:337:18
+at li
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-EVSHXWBZ.js?v=a643be9e:41:13
+at Provider (https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-FQMLEXGY.js?v=a643be9e:30:15)
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=a643be9e:299:13
+at ul
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-EVSHXWBZ.js?v=a643be9e:41:13
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:52:11
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:33:11
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-EVSHXWBZ.js?v=a643be9e:41:13
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:52:11
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:33:11
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-FQMLEXGY.js?v=a643be9e:363:15
+at Provider (https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-FQMLEXGY.js?v=a643be9e:293:15)
+at CollectionProvider (https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-FQMLEXGY.js?v=a643be9e:354:13)
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-navigation-menu.js?v=a643be9e:739:13
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:52:11
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-4WIT4MX7.js?v=a643be9e:33:11
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-FQMLEXGY.js?v=a643be9e:363:15
+at div
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-EVSHXWBZ.js?v=a643be9e:41:13
+at…
+at t.value (https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:17465)
+at new t (https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:12630)
+at t.value (https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:32766)
+at https://a461c9f8-2e77-4090-93a6-aad56adb43e3-00-2wltc7748lb3w.janeway.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:34400
