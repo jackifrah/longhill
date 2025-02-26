@@ -1,7 +1,7 @@
 export const content = {
   hero: {
-    title: "Building a full-service AI Agent for real estate portfolio management and underwriting",
-    description: "Make use of institutional-quality financial models for sale and custom underwriting and financial due diligence services."
+    title: "Building the Future of Real Estate Investment Analysis",
+    description: "Leveraging institutional-quality financial models and AI technology to transform real estate portfolio management and underwriting."
   },
   about: {
     title: "About Longhill Consulting",
