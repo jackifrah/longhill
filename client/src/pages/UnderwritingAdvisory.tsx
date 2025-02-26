@@ -46,9 +46,9 @@ export default function UnderwritingAdvisory() {
                     </div>
                     <div className="relative">
                       <img
-                        src="/attached_assets/MLCFs screenshot.png"
+                        src="/MLCFs screenshot.png"
                         alt="Master Leasing Cash Flows"
-                        className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform cursor-pointer"
+                        className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform cursor-pointer object-cover"
                       />
                     </div>
                   </div>
