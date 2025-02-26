@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-4 md:flex-row md:gap-2 md:px-0">
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-sm leading-loose text-muted-foreground">
-              © 2024 Longhill Consulting. All rights reserved.
+              © 2024 Longhill Management. All rights reserved.
             </span>
           </Link>
         </div>

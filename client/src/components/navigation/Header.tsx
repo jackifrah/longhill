@@ -10,7 +10,7 @@ export default function Header() {
       <div className="container flex h-16 items-center">
         <Link href="/" className="flex items-center space-x-1">  
           <Logo className="h-8 w-8" />
-          <span className="font-medium">Longhill Consulting</span>
+          <span className="font-medium">Longhill Management</span>
         </Link>
         <nav className="ml-auto flex items-center space-x-6">
           <button
