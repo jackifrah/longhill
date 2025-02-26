@@ -8,7 +8,7 @@ export default function Home() {
           <img
             alt="Jack Ifrah - Professional Photo"
             className="object-cover w-full h-full"
-            src="/images/jack-ifrah.png"
+            src="/images/jack-ifrah-profile.jpg"
           />
         </Card>
         <p className="text-gray-500 dark:text-gray-400">
