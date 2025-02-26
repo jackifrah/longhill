@@ -1,6 +1,5 @@
 import { Link, useLocation } from "wouter";
 import { Logo } from "@/components/ui/logo";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList, NavigationMenuLink } from "@/components/ui/navigation-menu";
 
 export default function Header() {
   const [location, navigate] = useLocation();
@@ -12,27 +11,20 @@ export default function Header() {
           <Logo className="h-8 w-8" />
           <span className="font-medium">Longhill Consulting</span>
         </Link>
-        <div className="flex-1" />
-        <NavigationMenu>
-          <NavigationMenuList className="gap-x-4">
-            <NavigationMenuItem>
-              <button
-                onClick={() => navigate("/ai-agent")}
-                className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-purple-800 transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-              >
-                Orly AI Agent
-              </button>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <button
-                onClick={() => navigate("/underwriting")}
-                className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
-              >
-                Underwriting Advisory
-              </button>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+        <nav className="ml-auto flex items-center space-x-4">
+          <button
+            onClick={() => navigate("/ai-agent")}
+            className="text-sm font-medium text-purple-800 hover:text-purple-900"
+          >
+            Orly AI Agent
+          </button>
+          <button
+            onClick={() => navigate("/underwriting")}
+            className="text-sm font-medium text-foreground hover:text-foreground/80"
+          >
+            Underwriting Advisory
+          </button>
+        </nav>
       </div>
     </header>
   );
