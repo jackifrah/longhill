@@ -11,7 +11,7 @@ export function OrlySection() {
           className="h-12 md:h-16 object-contain"
         />
         <div className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
-          An AI-powered financial analyst for real estate portfolios, providing on-demand cash flow forecasting and scenario modeling. <span className="text-purple-900 dark:text-purple-400">Orly</span> learns from user data to predict key expenses like taxes and insurance, helping investors automate the financial analyst role.
+          An AI-powered financial analyst for real estate portfolios, providing on-demand cash flow forecasting and scenario modeling. <span className="font-bold text-purple-900 dark:text-purple-400">Orly</span> learns from user data to predict key expenses like taxes and insurance, helping investors automate the financial analyst role.
         </div>
       </div>
     </div>
