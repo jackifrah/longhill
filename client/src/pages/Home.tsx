@@ -3,7 +3,7 @@ import React from "react";
 export default function Home() {
   return (
     <div className="container py-12">
-      <div className="mx-auto max-w-4xl grid md:grid-cols-2 gap-4 items-start">
+      <div className="mx-auto max-w-4xl grid md:grid-cols-2 items-start">
         <div className="w-full h-[300px] overflow-hidden">
           <img
             alt="Jack Ifrah - Professional Photo"
@@ -11,8 +11,8 @@ export default function Home() {
             src="/images/jack-ifrah-profile.jpg"
           />
         </div>
-        <div className="w-full h-[300px] flex flex-col justify-center">
-          <div className="max-w-xs">
+        <div className="w-full h-[300px] flex flex-col justify-center -ml-4">
+          <div className="max-w-[280px]">
             <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
               Jack Ifrah is an asset manager with experience across acquisitions, direct lending and strategic portfolio management. He has extensive underwriting experience in multifamily, commercial and land development assets. Jack is currently building Orly, a full-service AI-agent designed to automate the financial analyst role within investment firms.
             </p>
