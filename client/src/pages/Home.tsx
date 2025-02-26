@@ -20,7 +20,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="mx-auto max-w-4xl ml-16">
+      <div className="mx-auto max-w-4xl ml-24">
         <OrlySection />
       </div>
     </div>
