@@ -11,7 +11,7 @@ export default function Home() {
             src="IMG_8670 (1).jpg"
           />
         </Card>
-        <p className="text-gray-500 md:text-xl dark:text-gray-400">
+        <p className="text-gray-500 dark:text-gray-400">
           Jack Ifrah is an asset manager with experience across acquisitions, direct lending and strategic portfolio management. He has extensive underwriting experience in multifamily, commercial and land development assets. Jack is currently building Orly, a full-service AI-agent designed to automate the financial analyst role within investment firms.
         </p>
       </div>
