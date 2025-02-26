@@ -1,4 +1,5 @@
 import React from "react";
+import { OrlySection } from "@/components/ui/orly-section";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <OrlySection />
     </div>
   );
 }
