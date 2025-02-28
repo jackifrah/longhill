@@ -11,20 +11,6 @@ export default function UnderwritingAdvisory() {
         <div>
           <h2 className="text-2xl font-bold mb-8 text-center">Institutional-Level Underwriting, Market & Financial Due Diligence</h2>
 
-          {/* Pricing and Booking Section */}
-          <div className="flex items-center gap-4 justify-center mb-12">
-            <div className="flex items-center gap-2 text-lg font-medium">
-              Starting at <span className="text-xl font-bold">$149</span>
-            </div>
-            <Button 
-              className="gap-2 px-4 text-sm font-medium bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-800 hover:to-indigo-800 transition-all duration-300 rounded-full text-white"
-              onClick={() => window.open(scheduleLink, '_blank')}
-            >
-              <Calendar className="h-4 w-4" />
-              Book Your Consultation
-            </Button>
-          </div>
-
           {/* Services Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* LPs & Investors */}
@@ -59,6 +45,20 @@ export default function UnderwritingAdvisory() {
                 Assess risk with detailed financial due diligence & comprehensive market analysis
               </p>
             </div>
+          </div>
+
+          {/* Pricing and Booking Section */}
+          <div className="flex items-center gap-4 justify-center mb-12">
+            <div className="flex items-center gap-2 text-lg font-medium">
+              Starting at <span className="text-xl font-bold">$199</span>
+            </div>
+            <Button 
+              className="gap-2 px-4 text-sm font-medium bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-800 hover:to-indigo-800 transition-all duration-300 rounded-full text-white"
+              onClick={() => window.open(scheduleLink, '_blank')}
+            >
+              <Calendar className="h-4 w-4" />
+              Book Your Consultation
+            </Button>
           </div>
 
           {/* Analysis Features */}
