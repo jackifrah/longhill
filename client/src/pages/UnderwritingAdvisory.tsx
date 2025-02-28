@@ -11,6 +11,20 @@ export default function UnderwritingAdvisory() {
         <div>
           <h2 className="text-2xl font-bold mb-8 text-center">Institutional-Level Underwriting, Market & Financial Due Diligence</h2>
 
+          {/* Pricing and Booking Section */}
+          <div className="flex items-center gap-4 justify-center mb-12">
+            <div className="flex items-center gap-2 text-lg font-medium">
+              Starting at <span className="text-xl font-bold">$149</span>
+            </div>
+            <Button 
+              className="gap-2 px-4 text-sm font-medium bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-800 hover:to-indigo-800 transition-all duration-300 rounded-full text-white"
+              onClick={() => window.open(scheduleLink, '_blank')}
+            >
+              <Calendar className="h-4 w-4" />
+              Book Your Consultation
+            </Button>
+          </div>
+
           {/* Services Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* LPs & Investors */}
@@ -48,15 +62,15 @@ export default function UnderwritingAdvisory() {
           </div>
 
           {/* Analysis Features */}
-          <div className="space-y-6 mb-12">
-            <h3 className="text-xl font-semibold mb-4">Advanced Analysis Features</h3>
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold mb-4">Analysis Features:</h3>
             <div className="space-y-6 max-w-3xl mx-auto">
               <div className="flex items-start gap-4">
                 <div className="mt-1 w-8 h-8 rounded-lg bg-purple-100 dark:bg-purple-900/20 flex items-center justify-center flex-shrink-0">
                   <Calculator className="h-4 w-4 text-purple-600" />
                 </div>
                 <div>
-                  <h4 className="font-medium mb-2">Python-Powered Financial Modeling</h4>
+                  <h4 className="font-medium mb-2">Advanced Modeling</h4>
                   <p className="text-gray-600 dark:text-gray-400">
                     Sophisticated Python algorithms for detailed leasing cash flow analysis, tenant improvement calculations, and lease renewal probabilities
                   </p>
@@ -85,20 +99,6 @@ export default function UnderwritingAdvisory() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Pricing and Booking Section */}
-          <div className="flex items-center gap-4 justify-center">
-            <div className="flex items-center gap-2 text-lg font-medium">
-              Starting at <span className="text-xl font-bold">$149</span>
-            </div>
-            <Button 
-              className="gap-2 px-4 text-sm font-medium bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-800 hover:to-indigo-800 transition-all duration-300 rounded-full text-white"
-              onClick={() => window.open(scheduleLink, '_blank')}
-            >
-              <Calendar className="h-4 w-4" />
-              Book Your Consultation
-            </Button>
           </div>
         </div>
       </div>
