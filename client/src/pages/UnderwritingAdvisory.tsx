@@ -1,75 +1,11 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { FileText, ArrowRight, Calendar } from "lucide-react";
 import modelScreenshot from "../../../MLCFs screenshot.png";
 
 export default function UnderwritingAdvisory() {
-  const [calendarLoaded, setCalendarLoaded] = React.useState(false);
-  const [calendarError, setCalendarError] = React.useState<string | null>(null);
-  const scheduleLink = 'jack-ifrah';
-
-  React.useEffect(() => {
-    const loadMotionCalendar = async () => {
-      try {
-        // First verify our API connection
-        const response = await fetch('/api/motion/availability');
-        const data = await response.json();
-
-        if (!response.ok) {
-          throw new Error(data.error || 'Failed to connect to calendar service');
-        }
-
-        // Load Motion's SDK
-        const script = document.createElement('script');
-        script.src = 'https://app.usemotion.com/js/sdk.js';
-        script.async = true;
-
-        script.onload = () => {
-          if (window.Motion) {
-            try {
-              window.Motion.init({
-                container: '#motion-calendar',
-                url: `https://app.usemotion.com/meet/${scheduleLink}`,
-              });
-              setCalendarLoaded(true);
-              setCalendarError(null);
-            } catch (error) {
-              console.error('Motion SDK initialization error:', error);
-              setCalendarError('Failed to initialize calendar');
-            }
-          } else {
-            setCalendarError('Calendar service failed to initialize');
-          }
-        };
-
-        script.onerror = () => {
-          setCalendarError('Failed to load calendar service');
-        };
-
-        document.body.appendChild(script);
-
-        return () => {
-          if (script.parentNode) {
-            script.parentNode.removeChild(script);
-          }
-        };
-      } catch (error) {
-        const errorMessage = error instanceof Error ? error.message : 'Failed to load calendar';
-        console.error('Calendar loading error:', error);
-        setCalendarError(errorMessage);
-      }
-    };
-
-    loadMotionCalendar();
-  }, [scheduleLink]);
-
-  const handleRetry = () => {
-    setCalendarError(null);
-    setCalendarLoaded(false);
-    window.location.reload();
-  };
+  const scheduleLink = 'https://app.usemotion.com/meet/jack-ifrah';
 
   return (
     <div className="container py-12 flex justify-center">
@@ -82,28 +18,18 @@ export default function UnderwritingAdvisory() {
               <CardDescription>Book a time to discuss your real estate investment needs</CardDescription>
             </CardHeader>
 
-            <div className="mt-4">
-              {calendarError ? (
-                <div className="text-center p-4 rounded-lg bg-red-50 dark:bg-red-900/20">
-                  <p className="text-red-600 dark:text-red-400">
-                    {calendarError}. Please try again later or contact us directly.
-                  </p>
-                  <Button 
-                    variant="outline" 
-                    className="mt-4"
-                    onClick={handleRetry}
-                  >
-                    Retry Loading Calendar
-                  </Button>
-                </div>
-              ) : !calendarLoaded ? (
-                <div className="flex flex-col items-center justify-center h-[400px] gap-4">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
-                  <p className="text-muted-foreground">Loading calendar...</p>
-                </div>
-              ) : (
-                <div id="motion-calendar" className="min-h-[600px]"></div>
-              )}
+            <div className="mt-8 text-center">
+              <Button 
+                size="lg" 
+                className="gap-2"
+                onClick={() => window.open(scheduleLink, '_blank')}
+              >
+                <Calendar className="h-5 w-5" />
+                Book Your Consultation
+              </Button>
+              <p className="mt-4 text-sm text-muted-foreground">
+                You'll be redirected to our secure scheduling platform to select a time that works best for you.
+              </p>
             </div>
           </div>
 
@@ -148,13 +74,4 @@ export default function UnderwritingAdvisory() {
       </div>
     </div>
   );
-}
-
-// Add TypeScript declaration for Motion
-declare global {
-  interface Window {
-    Motion?: {
-      init: (config: { container: string; url: string }) => void;
-    };
-  }
 }
