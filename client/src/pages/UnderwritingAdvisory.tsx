@@ -8,14 +8,22 @@ import modelScreenshot from "../../../MLCFs screenshot.png";
 export default function UnderwritingAdvisory() {
   const [calendarLoaded, setCalendarLoaded] = React.useState(false);
   const [calendarError, setCalendarError] = React.useState<string | null>(null);
+  const formId = import.meta.env.VITE_MOTION_FORM_ID;
 
   React.useEffect(() => {
     const loadMotionCalendar = async () => {
+      if (!formId) {
+        setCalendarError('Calendar configuration is missing');
+        return;
+      }
+
       try {
         // First verify our API connection
         const response = await fetch('/api/motion/availability');
+        const data = await response.json();
+
         if (!response.ok) {
-          throw new Error('Failed to connect to calendar service');
+          throw new Error(data.error || 'Failed to connect to calendar service');
         }
 
         // Load Motion's SDK
@@ -27,7 +35,7 @@ export default function UnderwritingAdvisory() {
           if (window.Motion) {
             window.Motion.init({
               container: '#motion-calendar',
-              formId: process.env.VITE_MOTION_FORM_ID || '62c375',
+              formId: formId,
             });
             setCalendarLoaded(true);
             setCalendarError(null);
@@ -54,7 +62,13 @@ export default function UnderwritingAdvisory() {
     };
 
     loadMotionCalendar();
-  }, []);
+  }, [formId]);
+
+  const handleRetry = () => {
+    setCalendarError(null);
+    setCalendarLoaded(false);
+    window.location.reload();
+  };
 
   return (
     <div className="container py-12 flex justify-center">
@@ -76,7 +90,7 @@ export default function UnderwritingAdvisory() {
                   <Button 
                     variant="outline" 
                     className="mt-4"
-                    onClick={() => window.location.reload()}
+                    onClick={handleRetry}
                   >
                     Retry Loading Calendar
                   </Button>
