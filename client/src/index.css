@@ -8,62 +8,104 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground text-base min-h-screen overflow-x-hidden;  
+    @apply font-sans antialiased bg-background text-foreground text-base min-h-screen overflow-x-hidden;
   }
 
+  /* Improved Typography for Mobile */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-medium tracking-tight;  
+    @apply font-heading font-medium tracking-tight break-words hyphens-auto;
   }
 
   h1 {
-    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;  
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight;
   }
 
   h2 {
-    @apply text-xl sm:text-2xl md:text-3xl leading-snug;  
+    @apply text-xl sm:text-2xl md:text-3xl leading-snug;
   }
 
   h3 {
-    @apply text-lg sm:text-xl md:text-2xl leading-snug;  
+    @apply text-lg sm:text-xl md:text-2xl leading-snug;
   }
 
   p {
-    @apply leading-relaxed text-sm sm:text-base font-normal;  
+    @apply leading-relaxed text-sm sm:text-base font-normal break-words hyphens-auto;
   }
 
-  /* Mobile-first container padding */
+  /* Mobile-first Container */
   .container {
-    @apply px-4 sm:px-6 lg:px-8 mx-auto;
+    @apply px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl;
   }
 
-  /* Responsive grid layouts */
+  /* Responsive Grid System */
   .grid-layout {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8;
   }
 
-  /* Card layouts for mobile */
+  /* Card Layout System */
   .card-layout {
-    @apply flex flex-col sm:flex-row items-start gap-4;
+    @apply flex flex-col sm:flex-row items-start gap-4 rounded-lg p-4 sm:p-6;
   }
 
-  /* Form elements responsive sizing */
+  /* Form Elements */
   input, select, textarea {
-    @apply w-full max-w-full sm:max-w-md;
+    @apply w-full max-w-full sm:max-w-md text-base px-4 py-2;
   }
 
-  /* Button sizing */
+  /* Button Base */
   button {
-    @apply w-full sm:w-auto;
+    @apply min-h-[44px] min-w-[44px] px-4 py-2 text-base sm:text-sm font-medium;
+  }
+
+  /* Safe Area Handling */
+  .safe-area-inset {
+    @apply pt-safe-top pb-safe-bottom pl-safe-left pr-safe-right;
   }
 }
 
-/* Responsive spacing utilities */
+/* Responsive Spacing System */
 @layer utilities {
-  .section-padding {
+  .section-spacing {
     @apply py-8 sm:py-12 lg:py-16;
   }
 
   .content-spacing {
-    @apply space-y-4 sm:space-y-6;
+    @apply space-y-4 sm:space-y-6 lg:space-y-8;
+  }
+
+  /* Touch Target Sizes */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Responsive Text */
+  .responsive-text {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+}
+
+/* Mobile Navigation Styles */
+@layer components {
+  .mobile-nav {
+    @apply fixed inset-0 z-50 bg-background/95 backdrop-blur-sm lg:hidden;
+  }
+
+  .mobile-nav-content {
+    @apply flex flex-col gap-4 p-6;
+  }
+}
+
+/* Custom Scrollbar */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/50 rounded-full;
   }
 }
