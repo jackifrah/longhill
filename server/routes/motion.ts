@@ -15,11 +15,19 @@ router.get('/availability', async (req, res) => {
       headers: {
         'X-API-Key': MOTION_API_KEY!,
         'Content-Type': 'application/json',
+        'Accept': 'application/json',
       } as HeadersInit,
     });
 
     if (!response.ok) {
+      const errorText = await response.text();
+      console.error('Motion API Error Response:', errorText);
       throw new Error(`Failed to fetch availability: ${response.statusText}`);
+    }
+
+    const contentType = response.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
+      throw new Error('Invalid response format from Motion API');
     }
 
     const data = await response.json();

@@ -28,12 +28,17 @@ export default function UnderwritingAdvisory() {
 
         script.onload = () => {
           if (window.Motion) {
-            window.Motion.init({
-              container: '#motion-calendar',
-              url: `https://app.usemotion.com/meet/${scheduleLink}`,
-            });
-            setCalendarLoaded(true);
-            setCalendarError(null);
+            try {
+              window.Motion.init({
+                container: '#motion-calendar',
+                url: `https://app.usemotion.com/meet/${scheduleLink}`,
+              });
+              setCalendarLoaded(true);
+              setCalendarError(null);
+            } catch (error) {
+              console.error('Motion SDK initialization error:', error);
+              setCalendarError('Failed to initialize calendar');
+            }
           } else {
             setCalendarError('Calendar service failed to initialize');
           }
@@ -51,8 +56,9 @@ export default function UnderwritingAdvisory() {
           }
         };
       } catch (error) {
-        setCalendarError(error instanceof Error ? error.message : 'Failed to load calendar');
+        const errorMessage = error instanceof Error ? error.message : 'Failed to load calendar';
         console.error('Calendar loading error:', error);
+        setCalendarError(errorMessage);
       }
     };
 
