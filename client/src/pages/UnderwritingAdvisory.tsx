@@ -8,15 +8,10 @@ import modelScreenshot from "../../../MLCFs screenshot.png";
 export default function UnderwritingAdvisory() {
   const [calendarLoaded, setCalendarLoaded] = React.useState(false);
   const [calendarError, setCalendarError] = React.useState<string | null>(null);
-  const formId = import.meta.env.VITE_MOTION_FORM_ID;
+  const scheduleLink = 'jack-ifrah';
 
   React.useEffect(() => {
     const loadMotionCalendar = async () => {
-      if (!formId) {
-        setCalendarError('Calendar configuration is missing');
-        return;
-      }
-
       try {
         // First verify our API connection
         const response = await fetch('/api/motion/availability');
@@ -35,7 +30,7 @@ export default function UnderwritingAdvisory() {
           if (window.Motion) {
             window.Motion.init({
               container: '#motion-calendar',
-              formId: formId,
+              url: `https://app.usemotion.com/meet/${scheduleLink}`,
             });
             setCalendarLoaded(true);
             setCalendarError(null);
@@ -62,7 +57,7 @@ export default function UnderwritingAdvisory() {
     };
 
     loadMotionCalendar();
-  }, [formId]);
+  }, [scheduleLink]);
 
   const handleRetry = () => {
     setCalendarError(null);
@@ -153,7 +148,7 @@ export default function UnderwritingAdvisory() {
 declare global {
   interface Window {
     Motion?: {
-      init: (config: { container: string; formId: string }) => void;
+      init: (config: { container: string; url: string }) => void;
     };
   }
 }
