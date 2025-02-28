@@ -5,16 +5,16 @@ export default function Home() {
   return (
     <div className="container py-12 flex justify-center">
       <div className="mx-auto max-w-4xl">
-        <div className="grid md:grid-cols-2 items-start mb-8 rounded-xl p-4">
-          <div className="w-full h-[300px] overflow-hidden rounded-lg">
+        <div className="grid md:grid-cols-2 items-center gap-8 mb-8 rounded-xl p-4">
+          <div className="w-full max-h-[300px] overflow-hidden rounded-lg">
             <img
               alt="Jack Ifrah - Professional Photo"
               className="object-contain w-full h-full"
               src="/images/jack-ifrah-profile.jpg"
             />
           </div>
-          <div className="w-full h-[300px] flex flex-col justify-center -ml-6">
-            <div className="max-w-[280px]">
+          <div className="w-full flex flex-col justify-center">
+            <div className="space-y-4">
               <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
                 <span className="font-bold">Jack Ifrah</span> is an asset manager with experience across acquisitions, direct lending and strategic portfolio management. He has extensive underwriting experience in multifamily, commercial and land development assets. Jack is currently building <a href="https://orlyrealestate.com" target="_blank" rel="noopener noreferrer" className="font-bold text-purple-900 hover:text-purple-950 transition-colors">Orly</a>, a full-service AI-agent designed to automate the financial analyst role within investment firms.
               </p>
