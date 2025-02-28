@@ -1,12 +1,22 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { FileText, ArrowRight, Calendar } from "lucide-react";
+import { FileText, ArrowRight, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
+import useEmblaCarousel from 'embla-carousel-react';
 import modelScreenshot from "../../../MLCFs screenshot.png";
 import inputPage from "../../../input page.png";
 
 export default function UnderwritingAdvisory() {
   const scheduleLink = 'https://app.usemotion.com/meet/jack-ifrah/meeting';
+  const [emblaRef, emblaApi] = useEmblaCarousel();
+
+  const scrollPrev = React.useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = React.useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   return (
     <div className="container py-12 flex justify-center">
@@ -53,28 +63,40 @@ export default function UnderwritingAdvisory() {
                   Starting at <span className="text-xl font-bold">$149</span>
                 </div>
 
-                {/* Gallery Grid */}
-                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="relative group">
-                    <img
-                      src={modelScreenshot}
-                      alt="Cash Flow Analysis"
-                      className="w-full h-auto rounded-lg shadow-lg group-hover:scale-[1.02] transition-transform cursor-pointer object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                      <p className="text-white text-sm font-medium px-4 text-center">Detailed Cash Flow Projections</p>
+                {/* Image Carousel */}
+                <div className="mt-8 relative">
+                  <div className="overflow-hidden" ref={emblaRef}>
+                    <div className="flex">
+                      <div className="flex-[0_0_100%] min-w-0">
+                        <img
+                          src={modelScreenshot}
+                          alt="Cash Flow Analysis"
+                          className="w-full h-auto rounded-lg shadow-lg object-cover"
+                        />
+                      </div>
+                      <div className="flex-[0_0_100%] min-w-0">
+                        <img
+                          src={inputPage}
+                          alt="Property Analysis"
+                          className="w-full h-auto rounded-lg shadow-lg object-cover"
+                        />
+                      </div>
                     </div>
                   </div>
-                  <div className="relative group">
-                    <img
-                      src={inputPage}
-                      alt="Property Analysis"
-                      className="w-full h-auto rounded-lg shadow-lg group-hover:scale-[1.02] transition-transform cursor-pointer object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
-                      <p className="text-white text-sm font-medium px-4 text-center">Comprehensive Property Analysis & Unit Mix</p>
-                    </div>
-                  </div>
+
+                  {/* Navigation Buttons */}
+                  <button
+                    className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 dark:bg-gray-800/80 p-2 rounded-full shadow-lg hover:bg-white dark:hover:bg-gray-800 transition-colors"
+                    onClick={scrollPrev}
+                  >
+                    <ChevronLeft className="h-6 w-6" />
+                  </button>
+                  <button
+                    className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/80 dark:bg-gray-800/80 p-2 rounded-full shadow-lg hover:bg-white dark:hover:bg-gray-800 transition-colors"
+                    onClick={scrollNext}
+                  >
+                    <ChevronRight className="h-6 w-6" />
+                  </button>
                 </div>
               </CardContent>
             </Card>
