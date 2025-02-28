@@ -7,30 +7,53 @@ import modelScreenshot from "../../../MLCFs screenshot.png";
 
 export default function UnderwritingAdvisory() {
   const [calendarLoaded, setCalendarLoaded] = React.useState(false);
-  const [calendarError, setCalendarError] = React.useState(false);
+  const [calendarError, setCalendarError] = React.useState<string | null>(null);
 
   React.useEffect(() => {
-    // Initialize Motion's scheduling widget
-    const script = document.createElement('script');
-    script.src = 'https://app.usemotion.com/js/sdk.js';
-    script.async = true;
-    script.onload = () => {
-      if (window.Motion) {
-        window.Motion.init({
-          container: '#motion-calendar',
-          formId: '62c375', // Your Motion form ID
-        });
-        setCalendarLoaded(true);
+    const loadMotionCalendar = async () => {
+      try {
+        // First verify our API connection
+        const response = await fetch('/api/motion/availability');
+        if (!response.ok) {
+          throw new Error('Failed to connect to calendar service');
+        }
+
+        // Load Motion's SDK
+        const script = document.createElement('script');
+        script.src = 'https://app.usemotion.com/js/sdk.js';
+        script.async = true;
+
+        script.onload = () => {
+          if (window.Motion) {
+            window.Motion.init({
+              container: '#motion-calendar',
+              formId: process.env.VITE_MOTION_FORM_ID || '62c375',
+            });
+            setCalendarLoaded(true);
+            setCalendarError(null);
+          } else {
+            setCalendarError('Calendar service failed to initialize');
+          }
+        };
+
+        script.onerror = () => {
+          setCalendarError('Failed to load calendar service');
+        };
+
+        document.body.appendChild(script);
+
+        return () => {
+          if (script.parentNode) {
+            script.parentNode.removeChild(script);
+          }
+        };
+      } catch (error) {
+        setCalendarError(error instanceof Error ? error.message : 'Failed to load calendar');
+        console.error('Calendar loading error:', error);
       }
     };
-    script.onerror = () => {
-      setCalendarError(true);
-    };
-    document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
+    loadMotionCalendar();
   }, []);
 
   return (
@@ -48,12 +71,20 @@ export default function UnderwritingAdvisory() {
               {calendarError ? (
                 <div className="text-center p-4 rounded-lg bg-red-50 dark:bg-red-900/20">
                   <p className="text-red-600 dark:text-red-400">
-                    Unable to load the scheduling calendar. Please try again later or contact us directly.
+                    {calendarError}. Please try again later or contact us directly.
                   </p>
+                  <Button 
+                    variant="outline" 
+                    className="mt-4"
+                    onClick={() => window.location.reload()}
+                  >
+                    Retry Loading Calendar
+                  </Button>
                 </div>
               ) : !calendarLoaded ? (
-                <div className="flex items-center justify-center h-[400px]">
+                <div className="flex flex-col items-center justify-center h-[400px] gap-4">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                  <p className="text-muted-foreground">Loading calendar...</p>
                 </div>
               ) : (
                 <div id="motion-calendar" className="min-h-[600px]"></div>
