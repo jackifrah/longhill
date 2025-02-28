@@ -11,13 +11,12 @@
     @apply font-sans antialiased bg-background text-foreground text-base min-h-screen overflow-x-hidden;
   }
 
-  /* Improved Typography for Mobile */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-medium tracking-tight break-words hyphens-auto;
+    @apply font-heading font-medium tracking-tight break-words;
   }
 
   h1 {
-    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
   }
 
   h2 {
@@ -29,55 +28,53 @@
   }
 
   p {
-    @apply leading-relaxed text-sm sm:text-base font-normal break-words hyphens-auto;
+    @apply leading-relaxed text-sm sm:text-base font-normal break-words;
   }
 
-  /* Mobile-first Container */
+  /* Mobile-first container padding */
   .container {
-    @apply px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl;
+    @apply px-4 sm:px-6 lg:px-8 mx-auto;
   }
 
-  /* Responsive Grid System */
+  /* Responsive grid layouts */
   .grid-layout {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8;
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
   }
 
-  /* Card Layout System */
+  /* Card layouts for mobile */
   .card-layout {
-    @apply flex flex-col sm:flex-row items-start gap-4 rounded-lg p-4 sm:p-6;
+    @apply flex flex-col sm:flex-row items-start gap-4;
   }
 
-  /* Form Elements */
+  /* Form elements responsive sizing */
   input, select, textarea {
-    @apply w-full max-w-full sm:max-w-md text-base px-4 py-2;
+    @apply w-full max-w-full sm:max-w-md;
   }
 
-  /* Button Base */
+  /* Button sizing for touch targets */
   button {
-    @apply min-h-[44px] min-w-[44px] px-4 py-2 text-base sm:text-sm font-medium;
+    @apply min-h-[44px] min-w-[44px] px-4 py-2;
   }
-
   /* Safe Area Handling */
   .safe-area-inset {
     @apply pt-safe-top pb-safe-bottom pl-safe-left pr-safe-right;
   }
 }
 
-/* Responsive Spacing System */
+/* Responsive spacing utilities */
 @layer utilities {
-  .section-spacing {
+  .section-padding {
     @apply py-8 sm:py-12 lg:py-16;
   }
 
   .content-spacing {
-    @apply space-y-4 sm:space-y-6 lg:space-y-8;
+    @apply space-y-4 sm:space-y-6;
   }
 
   /* Touch Target Sizes */
   .touch-target {
     @apply min-h-[44px] min-w-[44px];
   }
-
   /* Responsive Text */
   .responsive-text {
     @apply text-sm sm:text-base lg:text-lg;
