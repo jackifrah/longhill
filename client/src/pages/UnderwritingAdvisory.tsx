@@ -12,20 +12,15 @@ export default function UnderwritingAdvisory() {
       <div className="mx-auto max-w-4xl">
         <div className="grid gap-8">
           {/* Calendar Section - Simplified */}
-          <div className="w-full bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-8 shadow-sm">
-            <div className="flex flex-col items-center justify-center space-y-6">
-              <Button 
-                size="lg" 
-                className="gap-3 h-16 px-8 text-lg font-medium hover:scale-[1.02] transition-all shadow-lg"
-                onClick={() => window.open(scheduleLink, '_blank')}
-              >
-                <Calendar className="h-6 w-6" />
-                Book Your Consultation
-              </Button>
-              <p className="text-sm text-center text-muted-foreground max-w-md">
-                Click above to schedule a personalized consultation with our experts. You'll be directed to our secure scheduling platform to choose your preferred time.
-              </p>
-            </div>
+          <div className="w-full bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10 rounded-xl p-12 flex justify-center items-center shadow-sm">
+            <Button 
+              size="lg" 
+              className="gap-3 h-16 px-10 text-lg font-medium bg-gradient-to-r from-primary to-primary/90 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-primary/20"
+              onClick={() => window.open(scheduleLink, '_blank')}
+            >
+              <Calendar className="h-6 w-6" />
+              Book Your Consultation
+            </Button>
           </div>
 
           {/* Financial Models Section */}
