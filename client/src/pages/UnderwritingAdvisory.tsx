@@ -26,36 +26,39 @@ export default function UnderwritingAdvisory() {
           {/* Financial Models Section */}
           <div className="w-full bg-white/50 dark:bg-gray-900/50 rounded-xl p-6">
             <Card>
-              <CardContent>
-                <div className="grid gap-6 mt-4">
-                  <Card className="border-2 border-gray-200 dark:border-gray-800">
-                    <CardContent className="p-6">
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="space-y-4">
-                          <div className="flex items-center gap-3">
-                            <FileText className="h-6 w-6 text-green-600" />
-                            <h3 className="text-xl font-semibold">Multifamily Acquisition</h3>
-                          </div>
-                          <p className="text-gray-600 dark:text-gray-400">
-                            Comprehensive financial model for multifamily property analysis and valuation
-                          </p>
-                          <div className="pt-4">
-                            <Button size="lg" className="w-full">
-                              Buy Now - $149
-                              <ArrowRight className="ml-2 h-4 w-4" />
-                            </Button>
-                          </div>
-                        </div>
-                        <div className="relative">
-                          <img
-                            src={modelScreenshot}
-                            alt="Master Leasing Cash Flows"
-                            className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform cursor-pointer object-cover"
-                          />
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+              <CardContent className="p-6">
+                <h2 className="text-2xl font-bold mb-6">Institutional-Level Underwriting, Market & Financial Due Diligence</h2>
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1 text-purple-600">✓</div>
+                    <p className="text-gray-700 dark:text-gray-300">
+                      <span className="font-semibold">LPs & Investors</span> – Gain visibility into a sponsor's operating assumptions and their practicality
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1 text-purple-600">✓</div>
+                    <p className="text-gray-700 dark:text-gray-300">
+                      <span className="font-semibold">GPs</span> – Build institutional-quality models & pitch decks for capital raising
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1 text-purple-600">✓</div>
+                    <p className="text-gray-700 dark:text-gray-300">
+                      <span className="font-semibold">Lenders</span> – Assess risk with detailed financial due diligence & market analysis
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-lg font-medium">
+                  Starting at <span className="text-xl font-bold">$149</span>
+                </div>
+                <div className="mt-8">
+                  <div className="relative">
+                    <img
+                      src={modelScreenshot}
+                      alt="Financial Analysis Preview"
+                      className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform cursor-pointer object-cover"
+                    />
+                  </div>
                 </div>
               </CardContent>
             </Card>
