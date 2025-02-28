@@ -83,7 +83,7 @@ export default function UnderwritingAdvisory() {
                 <div>
                   <h4 className="font-medium mb-2">Market Intelligence</h4>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Leverage premium market supply and absorption data from John Burns Real Estate Consulting and other top sources for accurate revenue growth (or decline) analysis
+                    Leverage premium market supply and absorption data from John Burns Real Estate Consulting and other top sources for accurate revenue growth (or decline) forecasting
                   </p>
                 </div>
               </div>
@@ -92,7 +92,7 @@ export default function UnderwritingAdvisory() {
                   <FileSpreadsheet className="h-4 w-4 text-purple-600" />
                 </div>
                 <div>
-                  <h4 className="font-medium mb-2">Detailed Supporting Documents</h4>
+                  <h4 className="font-medium mb-2">Detailed Support</h4>
                   <p className="text-gray-600 dark:text-gray-400">
                     Receive detailed explanations of assumptions, methodologies, and market comparables to support your investment decisions
                   </p>
