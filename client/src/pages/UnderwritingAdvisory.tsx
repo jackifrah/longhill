@@ -15,7 +15,7 @@ export default function UnderwritingAdvisory() {
           <div className="w-full bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10 rounded-xl p-12 flex justify-center items-center shadow-sm">
             <Button 
               size="lg" 
-              className="gap-3 h-16 px-10 text-lg font-medium bg-gradient-to-r from-primary to-primary/90 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-primary/20"
+              className="gap-3 h-16 px-10 text-lg font-medium backdrop-blur-sm bg-white/10 dark:bg-black/10 border border-white/20 dark:border-white/10 hover:bg-white/20 dark:hover:bg-black/20 hover:border-white/30 dark:hover:border-white/20 hover:scale-105 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.25)] rounded-2xl"
               onClick={() => window.open(scheduleLink, '_blank')}
             >
               <Calendar className="h-6 w-6" />
