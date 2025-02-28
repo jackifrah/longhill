@@ -50,7 +50,7 @@ export default function UnderwritingAdvisory() {
           {/* Analysis Features */}
           <div className="space-y-6 mb-12">
             <h3 className="text-xl font-semibold mb-4">Advanced Analysis Features</h3>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="space-y-6 max-w-3xl mx-auto">
               <div className="flex items-start gap-4">
                 <div className="mt-1 w-8 h-8 rounded-lg bg-purple-100 dark:bg-purple-900/20 flex items-center justify-center flex-shrink-0">
                   <Calculator className="h-4 w-4 text-purple-600" />
@@ -58,7 +58,7 @@ export default function UnderwritingAdvisory() {
                 <div>
                   <h4 className="font-medium mb-2">Python-Powered Financial Modeling</h4>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Leverage sophisticated Python algorithms for detailed leasing cash flow analysis, tenant improvement calculations, and lease renewal probabilities
+                    Sophisticated Python algorithms for detailed leasing cash flow analysis, tenant improvement calculations, and lease renewal probabilities
                   </p>
                 </div>
               </div>
@@ -69,7 +69,7 @@ export default function UnderwritingAdvisory() {
                 <div>
                   <h4 className="font-medium mb-2">Market Intelligence</h4>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Access premium market supply and absorption data from John Burns Real Estate Consulting for accurate market positioning
+                    Leverage premium market supply and absorption data from John Burns Real Estate Consulting and other top sources for accurate revenue growth (or decline) analysis
                   </p>
                 </div>
               </div>
@@ -78,7 +78,7 @@ export default function UnderwritingAdvisory() {
                   <FileSpreadsheet className="h-4 w-4 text-purple-600" />
                 </div>
                 <div>
-                  <h4 className="font-medium mb-2">Comprehensive Documentation</h4>
+                  <h4 className="font-medium mb-2">Detailed Supporting Documents</h4>
                   <p className="text-gray-600 dark:text-gray-400">
                     Receive detailed explanations of assumptions, methodologies, and market comparables to support your investment decisions
                   </p>
