@@ -2,22 +2,63 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { FileText, ArrowRight } from "lucide-react";
+import { FileText, ArrowRight, Calendar } from "lucide-react";
 import modelScreenshot from "../../../MLCFs screenshot.png";
 
 export default function UnderwritingAdvisory() {
+  const [calendarLoaded, setCalendarLoaded] = React.useState(false);
+  const [calendarError, setCalendarError] = React.useState(false);
+
+  React.useEffect(() => {
+    // Initialize Motion's scheduling widget
+    const script = document.createElement('script');
+    script.src = 'https://app.usemotion.com/js/sdk.js';
+    script.async = true;
+    script.onload = () => {
+      if (window.Motion) {
+        window.Motion.init({
+          container: '#motion-calendar',
+          formId: '62c375', // Your Motion form ID
+        });
+        setCalendarLoaded(true);
+      }
+    };
+    script.onerror = () => {
+      setCalendarError(true);
+    };
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="container py-12 flex justify-center">
       <div className="mx-auto max-w-4xl">
         <div className="grid gap-8">
           {/* Calendar Section */}
           <div className="w-full bg-white/50 dark:bg-gray-900/50 rounded-xl p-6">
-            <iframe
-              src="https://motion.com/forms/f/62c375"
-              className="w-full h-[600px] border-0"
-              loading="lazy"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            ></iframe>
+            <CardHeader className="px-0">
+              <CardTitle className="text-2xl font-semibold">Schedule a Consultation</CardTitle>
+              <CardDescription>Book a time to discuss your real estate investment needs</CardDescription>
+            </CardHeader>
+
+            <div className="mt-4">
+              {calendarError ? (
+                <div className="text-center p-4 rounded-lg bg-red-50 dark:bg-red-900/20">
+                  <p className="text-red-600 dark:text-red-400">
+                    Unable to load the scheduling calendar. Please try again later or contact us directly.
+                  </p>
+                </div>
+              ) : !calendarLoaded ? (
+                <div className="flex items-center justify-center h-[400px]">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                </div>
+              ) : (
+                <div id="motion-calendar" className="min-h-[600px]"></div>
+              )}
+            </div>
           </div>
 
           {/* Financial Models Section */}
@@ -61,4 +102,13 @@ export default function UnderwritingAdvisory() {
       </div>
     </div>
   );
+}
+
+// Add TypeScript declaration for Motion
+declare global {
+  interface Window {
+    Motion?: {
+      init: (config: { container: string; formId: string }) => void;
+    };
+  }
 }
