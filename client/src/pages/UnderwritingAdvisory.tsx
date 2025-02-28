@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { FileText, ArrowRight, Calendar } from "lucide-react";
 import modelScreenshot from "../../../MLCFs screenshot.png";
+import inputPage from "../../../input page.png";
 
 export default function UnderwritingAdvisory() {
   const scheduleLink = 'https://app.usemotion.com/meet/jack-ifrah/meeting';
@@ -51,13 +52,28 @@ export default function UnderwritingAdvisory() {
                 <div className="flex items-center gap-2 text-lg font-medium">
                   Starting at <span className="text-xl font-bold">$149</span>
                 </div>
-                <div className="mt-8">
-                  <div className="relative">
+
+                {/* Gallery Grid */}
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="relative group">
                     <img
                       src={modelScreenshot}
-                      alt="Financial Analysis Preview"
-                      className="w-full h-auto rounded-lg shadow-lg hover:scale-[1.02] transition-transform cursor-pointer object-cover"
+                      alt="Cash Flow Analysis"
+                      className="w-full h-auto rounded-lg shadow-lg group-hover:scale-[1.02] transition-transform cursor-pointer object-cover"
                     />
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+                      <p className="text-white text-sm font-medium px-4 text-center">Detailed Cash Flow Projections</p>
+                    </div>
+                  </div>
+                  <div className="relative group">
+                    <img
+                      src={inputPage}
+                      alt="Property Analysis"
+                      className="w-full h-auto rounded-lg shadow-lg group-hover:scale-[1.02] transition-transform cursor-pointer object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+                      <p className="text-white text-sm font-medium px-4 text-center">Comprehensive Property Analysis & Unit Mix</p>
+                    </div>
                   </div>
                 </div>
               </CardContent>
