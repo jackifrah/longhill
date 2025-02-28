@@ -5,7 +5,7 @@ import { FileText, ArrowRight, Calendar } from "lucide-react";
 import modelScreenshot from "../../../MLCFs screenshot.png";
 
 export default function UnderwritingAdvisory() {
-  const scheduleLink = 'https://app.usemotion.com/meet/jack-ifrah';
+  const scheduleLink = 'https://app.usemotion.com/meet/jack-ifrah/meeting';
 
   return (
     <div className="container py-12 flex justify-center">
