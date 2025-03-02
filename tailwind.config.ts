@@ -7,16 +7,16 @@ export default {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
-        sm: '1.5rem',
-        lg: '2rem',
+        DEFAULT: "1rem",
+        sm: "1.5rem",
+        lg: "2rem",
       },
       screens: {
-        xs: '100%',
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
+        xs: "100%",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
       },
     },
     extend: {
@@ -30,14 +30,16 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       spacing: {
-        'safe-top': 'env(safe-area-inset-top)',
-        'safe-bottom': 'env(safe-area-inset-bottom)',
-        'safe-left': 'env(safe-area-inset-left)',
-        'safe-right': 'env(safe-area-inset-right)',
+        "safe-top": "env(safe-area-inset-top)",
+        "safe-bottom": "env(safe-area-inset-bottom)",
+        "safe-left": "env(safe-area-inset-left)",
+        "safe-right": "env(safe-area-inset-right)",
       },
       colors: {
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        background: "hsl(var(--background, 0, 0%, 100%))", // Default white
+        foreground: "hsl(var(--foreground, 222.2, 84%, 4.9%))", // Default dark gray
+        border: "hsl(var(--border, 214.3, 31.8%, 91.4%))", // Light gray border
+
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
